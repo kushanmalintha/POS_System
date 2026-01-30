@@ -1,0 +1,113 @@
+@page {
+  size: 80mm auto;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background: white;
+}
+
+/* Receipt Paper */
+.receipt-paper {
+  width: 80mm;
+  padding: 12px;
+  background: white;
+  border: none;
+}
+
+/* Header */
+.receipt-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.shop-logo {
+  display: none; /* logos optional in print */
+}
+
+.shop-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.shop-address,
+.shop-phone {
+  font-size: 11px;
+}
+
+/* Divider */
+.receipt-divider {
+  border-top: 1px dashed #000;
+  margin: 8px 0;
+}
+
+/* Info */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* Items */
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.items-table th {
+  border-bottom: 1px dashed #000;
+  padding-bottom: 4px;
+  text-align: left;
+}
+
+.items-table td {
+  padding: 4px 0;
+}
+
+.item-qty,
+.item-price,
+.item-total {
+  text-align: right;
+}
+
+/* Total */
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.total-amount {
+  font-size: 14px;
+}
+
+/* Footer */
+.receipt-footer {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  opacity: 0.3;
+}
+
+.footer-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #2d3748;
+}
+
+/* Never print buttons */
+.print-btn,
+.receipt-actions {
+  display: none !important;
+}

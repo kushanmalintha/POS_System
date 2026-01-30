@@ -1,0 +1,164 @@
+/* Alert Messages */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+}
+
+.alert svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.alert-error {
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.alert-success {
+  background: #f0fff4;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+}
+
+/* User Form */
+.user-form {
+  padding: 24px;
+}
+
+/* Input with Icon */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  color: #a0aec0;
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  padding-left: 48px !important;
+}
+
+/* Username Cell */
+.username-cell {
+  font-weight: 500;
+}
+
+.user-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar-small {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Role Cell */
+.role-cell {
+  font-weight: 500;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #e9d8fd;
+  color: #553c9a;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Status Cell */
+.status-cell {
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.status-badge.active {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22543d;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Table Responsive for Users */
+@media (max-width: 768px) {
+  .data-table th:first-child,
+  .data-table td:first-child {
+    display: none;
+  }
+
+  .user-avatar-small {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .role-cell::before {
+    content: 'Role: ';
+    font-weight: 400;
+    color: #718096;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .status-cell::before {
+    content: 'Status: ';
+    font-weight: 400;
+    color: #718096;
+    display: block;
+    margin-bottom: 4px;
+  }
+}

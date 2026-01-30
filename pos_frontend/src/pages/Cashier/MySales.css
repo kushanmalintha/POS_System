@@ -1,0 +1,259 @@
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: #718096;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Invoice Cell */
+.invoice-cell {
+  font-weight: 600;
+}
+
+.invoice-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #eef2ff;
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+/* Date Cell */
+.date-cell {
+  font-weight: 500;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-time .date {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.date-time .time {
+  font-size: 13px;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Amount Cell */
+.amount-cell {
+  font-weight: 700;
+  color: #2d3748;
+  font-size: 16px;
+}
+
+/* View Button */
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #eef2ff;
+  color: #667eea;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.view-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Receipt Modal */
+.receipt-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.receipt-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background: #f7fafc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.close-modal svg {
+  width: 20px;
+  height: 20px;
+  color: #4a5568;
+}
+
+.close-modal:hover {
+  background: #e2e8f0;
+  transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .data-table th:first-child,
+  .data-table td:first-child {
+    display: table-cell;
+  }
+
+  .date-time {
+    gap: 2px;
+  }
+
+  .date-time .date {
+    font-size: 13px;
+  }
+
+  .date-time .time {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tbody tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .data-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f7fafc;
+  }
+
+  .data-table td:last-child {
+    border-bottom: none;
+  }
+
+  .data-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .invoice-cell::before {
+    content: 'Invoice: ';
+  }
+
+  .date-cell::before {
+    content: 'Date: ';
+  }
+
+  .amount-cell::before {
+    content: 'Amount: ';
+  }
+
+  .action-cell::before {
+    content: 'Action: ';
+  }
+
+  .receipt-modal {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 12px 12px 0 0;
+    max-height: 95vh;
+  }
+
+  .receipt-modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+}
