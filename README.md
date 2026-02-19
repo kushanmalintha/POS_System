@@ -69,7 +69,3 @@ Backend: https://github.com/kushanmalintha/POS_backend.git
 - Role-based access for different users (e.g., admin, cashier)  
 - Restrict access to certain operations based on user role  
 
-
-## License
-
-This project is open-source and available for learning purposes.
