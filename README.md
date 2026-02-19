@@ -1,55 +1,75 @@
-# 🛒 Point of Sale (POS) System
+# Point of Sale (POS) System
 
-A simple and efficient Point of Sale (POS) system designed to help businesses manage daily sales operations, products, and transactions with ease.
+A web-based Point of Sale (POS) system designed to handle product management, sales processing, and transaction tracking efficiently.
 
 ---
 
 ## Overview
 
-This system provides a complete solution for handling sales activities in a business environment. It allows users to manage products, process customer purchases, and track transactions in an organized manner.
+This system allows users to manage products, categories, and sales through an interactive interface. It supports real-time stock handling, structured sales processing, and organized transaction records.
 
 ---
 
 ## Project Repositories
 
-- Frontend: https://github.com/kushanmalintha/POS_frontend.git  
-- Backend: https://github.com/kushanmalintha/POS_backend.git  
+Frontend: https://github.com/kushanmalintha/POS_frontend.git  
+Backend: https://github.com/kushanmalintha/POS_backend.git  
 
 ---
 
 ## What the System Can Do
 
-### Sales Management
-- Process customer purchases quickly  
-- Generate and manage orders  
-- Handle multiple items in a single transaction  
+### Sales Processing
+- Create and complete sales transactions  
+- Add multiple products to a single sale  
+- Adjust quantities before confirming a sale  
+- Automatically calculate totals  
+- Generate and display a receipt after each sale  
 
 ---
 
 ### Product Management
 - Add new products  
 - Update existing product details  
-- Remove products from the system  
+- Delete products  
 - View all available products  
 
 ---
 
-### Inventory Tracking
-- Keep track of product quantities  
-- Update stock automatically after sales  
-- Monitor available inventory in real time  
+### Category Management
+- Create product categories  
+- Assign products to categories  
+- Prevent deletion of categories that are in use  
 
 ---
 
-### Order & Transaction Tracking
-- View past transactions  
-- Maintain records of all sales  
-- Track order details easily  
+### Inventory Handling
+- Track available stock for each product  
+- Automatically reduce stock when a sale is completed  
+- Prevent sales when stock is insufficient  
 
 ---
 
-### User Interaction
-- Simple and easy-to-use interface  
-- Smooth navigation for managing daily operations  
-- Designed for efficiency and quick usage  
- 
+### Product Search & Selection
+- Search and select products when creating a sale  
+- Quickly add products to a sale list  
+- Simplify handling of large product collections  
+
+---
+
+### Transaction Records
+- Store details of each sale  
+- View completed sales and their items  
+- Maintain consistent and reliable records of transactions  
+
+---
+
+### User Access & Interaction
+- User login functionality  
+- Role-based access for different users (e.g., admin, cashier)  
+- Restrict access to certain operations based on user role  
+
+
+## License
+
+This project is open-source and available for learning purposes.
